@@ -1,0 +1,6 @@
+[
+	{
+		"keys": ["shift+alt+s"],
+		"command": "scaffolding"
+	}
+]

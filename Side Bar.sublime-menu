@@ -1,0 +1,18 @@
+[
+
+	{
+		"caption":"-",
+		"id":"scaffolding-start"
+	},
+	{ 
+		"caption": "Create Project",
+		"command": "scaffolding",
+		"args": {
+			"paths": []
+		}
+	},
+	{
+		"caption":"-",
+		"id":"scaffolding-end"
+	}
+]

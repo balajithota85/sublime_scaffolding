@@ -1,0 +1,68 @@
+[
+    {
+        "caption": "Scaffolding: Create Project",
+        "command": "scaffolding"
+    },
+    {
+        "caption": "Preferences: Scaffolding Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/Scaffolding/Default (Windows).sublime-keymap",
+            "platform": "Windows"
+        }
+    },
+    {
+        "caption": "Preferences: Scaffolding Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/Scaffolding/Default (OSX).sublime-keymap",
+            "platform": "OSX"
+        }
+    },
+    {
+        "caption": "Preferences: Scaffolding Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/Scaffolding/Default (Linux).sublime-keymap",
+            "platform": "Linux"
+        }
+    },
+    {
+        "caption": "Preferences: Scaffolding Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (Windows).sublime-keymap",
+            "platform": "Windows"
+        }
+    },
+    {
+        "caption": "Preferences: Scaffolding Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (OSX).sublime-keymap",
+            "platform": "OSX"
+        }
+    },
+    {
+        "caption": "Preferences: Scaffolding Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (Linux).sublime-keymap",
+            "platform": "Linux"
+        }
+    },
+    {
+        "caption": "Preferences: Scaffolding Settings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/Scaffolding/Scaffolding.sublime-settings"
+        }
+    },
+    {
+        "caption": "Preferences: Scaffolding Settings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Scaffolding.sublime-settings"
+        }
+    }
+]
