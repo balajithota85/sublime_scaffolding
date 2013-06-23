@@ -1,6 +1,6 @@
 = Sublime Scaffolding
 
-A Sublime Text 2 plugin that is used to scaffold a web project i.e. used to generate a basic web project.
+A Sublime Text 2 plugin that is used to scaffold a web project i.e. used to generate a the structure of a html web project.
 
 == License
 
