@@ -25,7 +25,7 @@ class URLDownloader(threading.Thread):
 			response = urllib2.urlopen(self.url)
 			self.result = response.read()
 			script_file = open(self.file_path, 'w')
-			script_file.write(self.result);
+			script_file.write(self.result)
 			script_file.close()
 			return
 
@@ -84,56 +84,49 @@ class ScaffoldingCommand():
 	 			project_file = open(path + os.sep + file_name, 'w')
 	 			project_file.close()
 
- 		scripts_folder_name = settings.get('scripts_folder');
- 		styles_folder_name = settings.get('styles_folder');
- 		images_folder_name = settings.get('images_folder');
-
- 		scripts = settings.get(name + '_scripts')
- 		script_threads = []
- 		if scripts:
- 			no_of_script = len(scripts);
- 			for script in scripts:
-				last_slash_index = script.rfind('/');
-				if last_slash_index != -1:
-					script_file_name = script[last_slash_index+1:]
-				else:
-					script_file_name = "script" + no_of_script + '.txt'
-					no_of_script -= 1
-				
-				script_file_path = path;
-				script_file_path += os.sep + scripts_folder_name + os.sep + script_file_name
-
-				print "script: " + script_file_name
-				script_thread = URLDownloader(script, script_file_path)
-				script_threads.append(script_thread)
-				script_thread.start()
-
-		styles = settings.get(name + '_styles')
- 		styles_threads = []
-		if styles:
- 			no_of_styles = len(styles);
- 			for style in styles:
-				last_slash_index = style.rfind('/');
-				if last_slash_index != -1:
-					style_file_name = style[last_slash_index+1:]
-				else:
-					style_file_name = "style" + no_of_styles + '.txt'
-					no_of_style -= 1
-				
-				style_file_path = path;
-				style_file_path += os.sep + styles_folder_name + os.sep + style_file_name
-
-				print "style: " + style_file_name
-				style_thread = URLDownloader(style, style_file_path)
-				styles_threads.append(script_thread)
-				style_thread.start()
+	 	for resource in ['scripts', 'styles', 'images']:
+			self.populate_resources(path, name, resource)
 
 	def handle_script_threads(self, threads):
 		return
 
+	def populate_resources(self, path, name, resource_name):
+		resources_folder_name = settings.get(resource_name + '_folder')
+		resources = settings.get(name + '_' + resource_name)
+ 		resources_threads = []
+ 		if resources:
+ 			no_of_resources = len(resources)
+ 			for resource in resources:
+				last_slash_index = resource.rfind('/')
+				if last_slash_index != -1:
+					resource_file_name = resource[last_slash_index+1:]
+				else:
+					resource_file_name = resource_name + no_of_resources + '.txt'
+					no_of_resources -= 1
+				
+				resource_file_path = path
+				resource_file_path += os.sep + resources_folder_name + os.sep + resource_file_name
 
+				print "resource: " + resource_file_name
+				resource_thread = URLDownloader(resource, resource_file_path)
+				resources_threads.append(resource_thread)
+				resource_thread.start()
+		return
+
+	def populate_styles(self, path, name):
+		return
 class ScaffoldingCreateProjectCommand(sublime_plugin.WindowCommand, ScaffoldingCommand):
 	def run(self, paths=[]):
+		if not paths:
+			current_view_path = sublime.active_window().active_view().file_name()
+			current_view_last_index = current_view_path.rfind(os.sep)
+			if current_view_last_index != -1:
+				current_view_folder_path = current_view_path[0:current_view_last_index]
+				# print current_view_folder_path
+				paths = [current_view_folder_path]
+			else:
+				return
+
 		project_name = get_project_name()
 		self.window.run_command('hide_panel')
 		# self.window.show_input_panel("Project Name:", name, lambda name:self.on_load(paths, name), None, None)
@@ -148,6 +141,16 @@ class ScaffoldingCreateProjectCommand(sublime_plugin.WindowCommand, ScaffoldingC
 
 class ScaffoldingCreateScaffoldProjectCommand(sublime_plugin.WindowCommand, ScaffoldingCommand):
 	def run(self, paths=[]):
+		if not paths:
+			current_view_path = sublime.active_window().active_view().file_name()
+			current_view_last_index = current_view_path.rfind(os.sep)
+			if current_view_last_index != -1:
+				current_view_folder_path = current_view_path[0:current_view_last_index]
+				# print current_view_folder_path
+				paths = [current_view_folder_path]
+			else:
+				return
+
 		project_name = get_project_name()
 		self.window.run_command('hide_panel')
 		# self.window.show_input_panel("Project Name:", name, lambda name:self.on_load(paths, name), None, None)

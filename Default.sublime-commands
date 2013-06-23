@@ -1,7 +1,17 @@
 [
     {
         "caption": "Scaffolding: Create Project",
-        "command": "scaffolding"
+        "command": "scaffolding_create_project",
+        "args": {
+                    "paths": []
+                }
+    },
+    {
+        "caption": "Scaffolding: Create Scaffold Project",
+        "command": "scaffolding_create_scaffold_project",
+        "args": {
+            "paths": []
+        }
     },
     {
         "caption": "Preferences: Scaffolding Key Bindings – Default",

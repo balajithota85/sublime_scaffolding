@@ -20,7 +20,7 @@
 				"command": "scaffolding_create_scaffold_project",
 				"args": {
 					"paths": []
-				}
+				}	
 			}
 		]
 	}
