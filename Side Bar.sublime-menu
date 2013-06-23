@@ -1,18 +1,27 @@
 [
-
 	{
-		"caption":"-",
-		"id":"scaffolding-start"
+		"caption": "-",
+		"id": "scaffolding_side_menu_start"
 	},
 	{ 
-		"caption": "Create Project",
-		"command": "scaffolding",
-		"args": {
-			"paths": []
-		}
-	},
-	{
-		"caption":"-",
-		"id":"scaffolding-end"
+		"caption": "Scaffolding",
+		"id": "scaffolding_side_menu",
+		"children":
+		[
+			{
+				"caption": "Create Project",
+				"command": "scaffolding_create_project",
+				"args": {
+					"paths": []
+				}
+			},
+			{
+				"caption": "Create Bootstrap Project",
+				"command": "scaffolding_create_bootstrap_project",
+				"args": {
+					"paths": []
+				}	
+			}
+		]
 	}
 ]

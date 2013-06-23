@@ -1,0 +1,36 @@
+{
+	/*"parameters": [],*/
+	"new_project_name": "New Project",
+	
+	"new_project_relative_to_workspace": true,
+
+	"scaffold_folders": ["app", "dist", "test"],
+	"project_folders": ["scripts", "styles", "images"],
+	"app_project_files": ["index.html", "404.html", "robots.txt"],
+	"dist_project_files": ["index.html", "404.html", "robots.txt"],
+
+	"dev_folder": "app",
+	"production_folder": "dist",
+	"test_folder": "test",
+	
+	"script_folder": "scripts",
+	"styles_folder": "styles",
+	"images_folder": "images",
+	"other_folders": [],
+	
+	"app_scripts": [
+		"http://code.jquery.com/jquery-1.10.1.js"
+	],
+	"app_styles": [],
+	"app_images": [],
+
+
+	"dist_scripts": [
+		"http://code.jquery.com/jquery-1.10.1.min.js"
+	],
+	"dist_styles": [],
+	"dist_images": [],
+
+	"styles": [],
+	"images": []
+}
