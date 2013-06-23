@@ -13,24 +13,36 @@
 	"production_folder": "dist",
 	"test_folder": "test",
 	
-	"script_folder": "scripts",
+	"scripts_folder": "scripts",
 	"styles_folder": "styles",
 	"images_folder": "images",
 	"other_folders": [],
 	
 	"app_scripts": [
-		"http://code.jquery.com/jquery-1.10.1.js"
+		"http://code.jquery.com/jquery-1.10.1.js",
+		"http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"
 	],
-	"app_styles": [],
+	"app_styles": [
+		"http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+	],
 	"app_images": [],
 
 
 	"dist_scripts": [
-		"http://code.jquery.com/jquery-1.10.1.min.js"
+		"http://code.jquery.com/jquery-1.10.1.min.js",
+		"http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"
 	],
-	"dist_styles": [],
+	"dist_styles": [
+		"http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+	],
 	"dist_images": [],
 
-	"styles": [],
-	"images": []
+	"test_scripts": [
+		"http://code.jquery.com/jquery-1.10.1.min.js",
+		"http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"
+	],
+	"test_styles": [
+		"http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+	],
+	"test_images": []
 }

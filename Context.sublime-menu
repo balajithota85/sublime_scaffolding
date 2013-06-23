@@ -1,11 +1,11 @@
 [
 	{
 		"caption": "-",
-		"id": "scaffolding_side_menu_start"
+		"id": "scaffolding_context_menu_start"
 	},
 	{ 
 		"caption": "Scaffolding",
-		"id": "scaffolding_side_menu",
+		"id": "scaffolding_context_menu",
 		"children":
 		[
 			{
@@ -20,7 +20,7 @@
 				"command": "scaffolding_create_scaffold_project",
 				"args": {
 					"paths": []
-				}	
+				}
 			}
 		]
 	}
